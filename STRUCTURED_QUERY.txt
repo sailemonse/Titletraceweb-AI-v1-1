@@ -1,0 +1,1 @@
+TitleTrace AI structured query: street number, street name, street type, optional unit, city, state, ZIP. The backend builds one canonical address before matching and live parcel resolution. Legacy free-text queries remain supported.

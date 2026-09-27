@@ -1,0 +1,9 @@
+TitleTrace AI — Dynamic data architecture
+
+1. User enters an address.
+2. TitleTrace queries the official Jacksonville/Duval County GIS parcel layer live.
+3. The live parcel layer returns the RE number and identity fields.
+4. TitleTrace uses that RE number to open the official Property Appraiser detail page.
+5. PAO detail data is merged into the property identity.
+6. Research continues only after a parcel/RE number is resolved.
+7. No county-wide PAO download or 1M-record local index is required.

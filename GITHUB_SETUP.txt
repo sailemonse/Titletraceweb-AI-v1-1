@@ -1,0 +1,49 @@
+TITLETRACE AI — NEW REPOSITORY SETUP
+
+1. Create a NEW empty GitHub repository named:
+   titletrace-ai
+
+2. Upload the CONTENTS of this ZIP to the ROOT of the GitHub repository.
+   Do not put everything inside another nested folder.
+
+3. Confirm these important files are visible in the repository root:
+   server.py
+   wsgi.py
+   requirements.txt
+   render.yaml
+   app.py
+
+4. Confirm these folders are visible:
+   data/
+   record/
+   reports/
+   research/
+
+5. The data/ folder contains README.txt.
+   The record/ folder contains README.txt.
+   The reports/ folder contains README.txt.
+
+6. In Render choose:
+   New → Web Service
+
+7. Connect the new GitHub repository.
+
+8. Render settings:
+   Build Command:
+   pip install -r requirements.txt
+
+   Start Command:
+   gunicorn --bind 0.0.0.0:$PORT wsgi:application
+
+9. Do NOT choose Static Site.
+
+10. After deployment, test:
+    /health
+
+    The page should return:
+    OK
+
+11. Then open the main TitleTrace AI site.
+
+Gunicorn is included in requirements.txt, and wsgi.py is included as the
+Gunicorn adapter. You should NOT need to install Gunicorn manually.
